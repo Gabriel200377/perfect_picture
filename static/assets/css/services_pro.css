@@ -1,0 +1,391 @@
+    /* --- 1. Global Styles & Typography --- */
+    
+     :root {
+        --color-primary: #8B4513;
+        /* Saddle Brown - a rich, sophisticated color */
+        --color-secondary: #F0E68C;
+        /* Khaki - light accent */
+        --color-dark: #333333;
+        --color-light: #F9F9F9;
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'Poppins', sans-serif;
+        --spacing-large: 60px;
+        --spacing-medium: 40px;
+        --spacing-small: 20px;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: var(--font-body);
+        line-height: 1.6;
+        color: var(--color-dark);
+        background-color: #FFFFFF;
+    }
+    
+    .container.header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 3rem; */
+        background-color: #090808;
+    }
+    /* .container {
+        max-width: var(--container-w);
+        margin: 0 auto;
+        padding: 1rem;
+    } */
+    /* .container.header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.75rem 0;
+        max-width: var(--container-w);
+        margin: 0 auto;
+        padding: 1rem;
+    } */
+    
+    .nav .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .nav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 500;
+        opacity: 0.92;
+    }
+    
+    .section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing-large) var(--spacing-small);
+        color: var(--color-light);
+        background-color: #448;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-heading);
+        line-height: 1.2;
+        color: var(--color-dark);
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-medium);
+        border-bottom: 2px solid var(--color-secondary);
+        display: inline-block;
+        padding-bottom: 10px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        /* To center the block */
+    }
+    /* --- Buttons --- */
+    
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+    
+    .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        border: 2px solid var(--color-primary);
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--color-dark);
+        border-color: var(--color-dark);
+        transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-secondary:hover {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+    }
+    
+    .btn-large {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
+    /* --- 2. Hero Section --- */
+    
+    .hero-section {
+        background: var(--color-dark);
+        /* Use an elegant dark color, assume image goes behind */
+        color: var(--color-light);
+        text-align: center;
+        padding: 150px var(--spacing-small);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .hero-section h1 {
+        color: var(--color-light);
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-section p {
+        font-size: 1.2rem;
+        margin-bottom: var(--spacing-medium);
+    }
+    /* --- 3. Signature Services (Editorial Grid) --- */
+    
+    .signature-services {
+        background-color: var(--color-light);
+        padding-top: var(--spacing-large);
+    }
+    
+    .service-feature {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        /* 60% content, 40% visual */
+        gap: var(--spacing-medium);
+        margin-bottom: var(--spacing-large);
+        align-items: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee;
+    }
+    /* Reverse layout for the second item (Haute Couture) */
+    
+    .service-feature.haute-couture {
+        grid-template-columns: 2fr 3fr;
+    }
+    
+    .feature-content {
+        padding: var(--spacing-medium);
+        background-color: var(--color-dark);
+        margin-bottom: 15px;
+    }
+    
+    .feature-content h3 {
+        color: var(--color-primary);
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .feature-visual {
+        min-height: 400px;
+        background-image: #C0C0C0;
+        /* Placeholder color */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .pricing-timing {
+        margin: 20px 0;
+        padding: 15px;
+        border-left: 3px solid var(--color-secondary);
+        background-color: var(--color-primary);
+    }
+    
+    .pricing-timing ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+    
+    .pricing-timing li {
+        margin-bottom: 5px;
+    }
+    
+    .pricing-timing .note {
+        font-style: italic;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+    /* --- 4. Consultation Process (3-Column Grid) --- */
+    
+    .consultation-process {
+        background-color: #4d4d4d;
+    }
+    
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-medium);
+        text-align: center;
+    }
+    
+    .process-step {
+        padding: var(--spacing-small);
+        border: 1px solid #ddd;
+        border-top: 5px solid var(--color-primary);
+        transition: box-shadow 0.3s;
+    }
+    
+    .process-step:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .process-step h4 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: var(--color-primary);
+    }
+    /* --- 5. Policies & Client Agreement (Accordion) --- */
+    
+    .policies-agreement {
+        background-color: var(--color-light);
+    }
+    
+    .accordion-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .accordion-item {
+        border: 1px solid #e0e0e0;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    
+    .policy-header {
+        padding: 15px 20px;
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        cursor: pointer;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    
+    .policy-header::after {
+        content: '+';
+        font-size: 1.5rem;
+        line-height: 1;
+        transition: transform 0.3s;
+    }
+    
+    .accordion-item.active .policy-header {
+        background-color: var(--color-primary);
+    }
+    
+    .accordion-item.active .policy-header::after {
+        content: '−';
+        transform: rotate(180deg);
+    }
+    
+    .policy-content {
+        max-height: 0;
+        padding: 0 20px;
+        transition: max-height 0.3s ease-out;
+        background-color: #333;
+        color: #FFFFFF;
+    }
+    
+    .policy-content p {
+        padding: 15px 0;
+        border-top: 1px solid #eee;
+    }
+    /* --- 6. Premium Callout --- */
+    
+    .premium-callout {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        text-align: center;
+        padding: var(--spacing-medium) 0;
+    }
+    
+    .premium-callout h3 {
+        color: var(--color-secondary);
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .premium-callout ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    /* --- 7. Final CTA --- */
+    
+    .final-cta {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        text-align: center;
+        padding: var(--spacing-large) var(--spacing-small);
+    }
+    
+    .cta-content h3 {
+        color: var(--color-light);
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    /* --- Media Queries for Responsiveness --- */
+    /* Tablet & Smaller Desktop */
+    
+    @media (max-width: 992px) {
+        .service-feature {
+            grid-template-columns: 1fr;
+            /* Stack into a single column */
+        }
+        .service-feature.haute-couture {
+            grid-template-columns: 1fr;
+        }
+        .feature-visual {
+            order: -1;
+            /* Move image above content on stack */
+        }
+    }
+    /* Mobile */
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 100px var(--spacing-small);
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        .process-grid {
+            grid-template-columns: 1fr;
+            /* Stack consultation steps */
+        }
+        .premium-callout ul {
+            flex-direction: column;
+            /* Stack premium prices */
+            gap: 10px;
+        }
+    }

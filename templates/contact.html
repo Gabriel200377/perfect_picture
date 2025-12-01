@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Perfect Tailoring Service | Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Picture perfect offers bespoke garment creation services tailored to each client’s vision. (grid + slide-in cart)" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#"><img src="{{ url_for('static', filename='images/IMG_4912.PNG') }}" alt="logo" width="8%" height="auto"> </a>
+
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services_pro.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!-- Header -->
+    <!-- <header class="site-header">
+                    <div class="container header-inner">
+                        <a href="index.html" class="brand">Picture Perfect</a>
+                    </div>
+                </header> -->
+
+    <!-- Hero -->
+    <section class="hero contact-hero" style="background-image:url('imgs/ChatGPT\ Image\ Oct\ 12\,\ 2025\,\ 02_16_23\ PM.png')">
+        <div class="hero-overlay">
+            <div class="hero-inner">
+                <h1>Get in Touch</h1>
+                <p class="lead">We’d love to hear from you. Let’s make something timeless together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container">
+        <div class="contact-grid">
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" action="/submit_form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input name="fullname" type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input name="email" type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input name="tel" id="phone" type="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input name="subject" type="text" id="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-cta full">Send Message</button>
+                </form>
+                <p class="status-msg"></p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Visit Us:</h2>
+                <p>RB7 ACO Estate, Abuja, Nigeria.</p>
+
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <!-- Replace '#' with your handles -->
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="#" class="social"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Picture Perfect. All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message Sent</h3>
+            <p>Your message has been stored successfully. We'll get back to you soon.</p>
+            <button id="closeModal" class="btn btn-cta">Close</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/js/contact.js.css') }}"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>
+
+<!-- <div class="actions">
+    <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="cart-icon" aria-hidden="true">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+</div>
+</div>
+</header> -->

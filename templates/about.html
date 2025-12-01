@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Perfect Tailoring Service | Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Picture perfect offers bespoke garment creation services tailored to each client’s vision. (grid + slide-in cart)" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#"><img src="{{ url_for('static', filename='images/IMG_4912.PNG') }}" alt="logo" width="8%" height="auto"> </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services_pro.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="actions">
+                <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="cart-icon" aria-hidden="true">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+            </div>
+        </div>
+    </header>
+    <!-- About -->
+
+    <body>
+
+        <!-- Header -->
+        <!-- <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" class="brand">Picture Perfect</a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> -->
+
+        <!-- Hero -->
+        <section class="hero about-hero" style="background-image:url "{{ url_for('static', filename='images/ChatGPT\ Image\ Oct\ 12\,\ 2025\,\ 03_22_38\ PM.png') }}" ;>
+            <div class="hero-overlay">
+                <div class="hero-inner">
+                    <h1>Our Story of Elegance & Craft</h1>
+                    <p class="lead">Where craftsmanship meets couture — redefining bespoke luxury for the modern bride.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-page container">
+            <div class="about-intro">
+                <h2>About Picture Perfect</h2>
+                <p>At <strong>Picture Perfect</strong>, every gown begins with a dream — a vision of elegance, individuality, and grace. Our couture atelier specializes in creating handcrafted pieces that celebrate the beauty of every woman through timeless
+                    design and meticulous attention to detail.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Our Philosophy</h3>
+                    <p>We believe in the artistry of fashion — every stitch, bead, and fabric choice reflects a story of passion and precision. Our designers work closely with each client from consultation to final fitting, ensuring a flawless experience
+                        that mirrors your personality and event vision.</p>
+
+                    <h3>What We Offer</h3>
+                    <ul class="offer-list">
+                        <li>Bespoke couture dresses crafted from exclusive fabrics.</li>
+                        <li>Custom bridal gowns tailored to perfection.</li>
+                        <li>Haute couture styling sessions (#ThisIsNotADress).</li>
+                        <li>Virtual and in-person consultations.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="url "{{ url_for('static', filename='images/ChatGPT Image Oct 12, 2025, 05_46_41 PM.png') }}" alt="Couture atelier workspace">
+                </div>
+            </div>
+
+            <div class="mission">
+                <h3>Our Promise</h3>
+                <p>Every Picture Perfect creation is a reflection of passion, precision, and purpose. From the first sketch to the final bead, we deliver luxury that feels as personal as it looks extraordinary.</p>
+                <a href="services_pro.html" class="btn btn-cta">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2025 Picture Perfect. All rights reserved.</p>
+        </footer>
+
+        <script src="{{ url_for('static', filename='assets/css/about.js') }}"></script>
+    </body>
+
+</html>

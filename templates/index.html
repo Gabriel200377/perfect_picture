@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Perfect Tailoring Service | Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/services_pro.css') }}.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Picture perfect offers bespoke garment creation services tailored to each client’s vision. (grid + slide-in cart)" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#"><img src= "{{ url_for('static', filename='images/IMG_4912.PNG') }}" alt="logo" width="8%" height="auto"> </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services_pro.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="actions">
+                <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="cart-icon" aria-hidden="true">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style="background-color:rgba(68, 68, 136, 0.6)">
+        <div class="hero-overlay">
+            <div class="container hero-inner">
+                <h1>Elegance Redefined</h1>
+                <p class="lead">Curated pieces. Timeless silhouettes.</p>
+                <a href="#products" class="btn btn-cta">Shop Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="container">
+        <section id="products" class="products-section">
+            <header class="section-head">
+                <h2>Featured</h2>
+                <p class="muted">Selected pieces — limited stock</p>
+            </header>
+
+            <div class="product-grid">
+                <!-- product items: data-name and data-price in kobo/lowest currency integer (we'll use naira as integer) -->
+                <article class="product-card">
+                    <img src=  "{{ url_for('static', filename='images/ikshana-productions-xDUwFraNJbg-unsplash.jpg') }}" alt="Satin Dress">
+                    <div class="card-body">
+                        <h3 class="product-title">Gold Satin Dress</h3>
+                        <p class="product-price">₦120,000</p>
+                        <button class="btn btn-add add-to-cart" data-name="Gold Satin Dress" data-price="120000">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src= "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt="Heels">
+                    <div class="card-body">
+                        <h3 class="product-title">Classic Heels</h3>
+                        <p class="product-price">₦95,000</p>
+                        <button class="btn btn-add add-to-cart" data-name="Classic Heels" data-price="95000">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="{{ url_for('static', filename='images/portrait-woman-wearing-lavender-colored-fashion-garments-color-year.jpg') }}" alt="Blazer">
+                    <div class="card-body">
+                        <h3 class="product-title">Tailored Blazer</h3>
+                        <p class="product-price">₦85,000</p>
+                        <button class="btn btn-add add-to-cart" data-name="Tailored Blazer" data-price="85000">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src= "https://images.unsplash.com/photo-1510227272981-87123e259b17?auto=format&fit=crop&w=900&q=80" alt="Tote">
+                    <div class="card-body">
+                        <h3 class="product-title">Everyday Tote</h3>
+                        <p class="product-price">₦12,000</p>
+                        <button class="btn btn-add add-to-cart" data-name="Everyday Tote" data-price="12000">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src= "{{ url_for('static', filename='images/happy-good-looking-black-woman-wearing-grey-leather-coat-posing-beige-background-autumn-winter-fashion-concept.jpg') }}" alt="Bag">
+                    <div class="card-body">
+                        <h3 class="product-title">Leather Handbag</h3>
+                        <p class="product-price">₦85,000</p>
+                        <button class="btn btn-add add-to-cart" data-name="Leather Handbag" data-price="85000">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src= "{{ url_for('static', filename='images/female-college-student-with-combed-curly-hair-wears-neat-clothes-focused-away-into-distance-poses-bridge-agaist-cityscrapers-carries-fabric-bag-with-necessary-things.jpg') }}" alt="Top">
+                    <div class="card-body">
+                        <h3 class="product-title">Essential Knit Top</h3>
+                        <p class="product-price">₦9,500</p>
+                        <button class="btn btn-add add-to-cart" data-name="Essential Knit Top" data-price="9500">Add to cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Slide-in Cart Drawer -->
+    <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart" class="close-btn" aria-label="Close cart">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <!-- items injected by JS -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="totals">
+                <span>Subtotal</span>
+                <strong id="cartTotal">₦0</strong>
+            </div>
+            <button id="checkoutBtn" class="btn btn-cta full">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" hidden></div>
+
+    <!-- Footer -->
+    <footer id="contact" class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Picture perfect — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+</body>
+
+</html>

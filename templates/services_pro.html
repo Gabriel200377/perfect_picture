@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Perfect Tailoring Service | Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/services_pro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Picture perfect offers bespoke garment creation services tailored to each client’s vision. (grid + slide-in cart)" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#"><img src="{{ url_for('static', filename='images/IMG_4912.PNG') }}" alt="logo" width="8%" height="auto"> </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services_pro.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            // Simple JavaScript for Accordion/Collapsible Sections
+            document.addEventListener('DOMContentLoaded', () => {
+                const policyHeaders = document.querySelectorAll('.policy-header');
+                policyHeaders.forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const accordionItem = header.parentElement;
+                        accordionItem.classList.toggle('active');
+
+                        if (accordionItem.classList.contains('active')) {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        } else {
+                            content.style.maxHeight = '0';
+                        }
+                    });
+                });
+            });
+        </script>
+    </header>
+
+    <body>
+
+        <header class="hero-section">
+            <h1>Crafted for You: The Art of Picture Perfect Couture</h1>
+            <p>From bespoke designs to hand-beaded ensembles, exceptional quality is always in the detail</p>
+            <a href="contact.html" class="btn btn-primary">Book Your Consultation Now</a>
+        </header>
+
+        <main>
+            <section class="section-container signature-services">
+                <h2>Our Signature Services</h2>
+
+                <div class="service-feature bespoke-bridal">
+                    <div class="feature-content">
+                        <h3>Bespoke & Bridal Couture</h3>
+                        <p>Every garment is specially bespoke to fit your exact body, requiring focused time and attention to achieve the perfect fitting.Our couture service ensures you enjoy the entire production and design journey with us.</p>
+
+                        <div class="pricing-timing">
+                            <h4>Key Pricing & Timing</h4>
+                            <p>All bespoke orders begin with a consultation. We recommend booking your consultation 6 months prior to your event to allow sufficient time for planning, fabric sourcing, fitting, and beading.
+                            </p>
+                            <ul>
+
+                                <li>Bespoke pieces start at $1,200 (N1,800,000).</li>
+                                <li>Standard bridal dresses start from $3,000 minimum.</li>
+
+                                <li>Fully hand-beaded ensembles begin at $2,000 (N3,000,000).</li>
+                            </ul>
+
+                            <p class="note">Important Note: Final pricing is determined during a private consultation based on your chosen design.For privacy and exclusivity, we do not share the pricing of previous client garments.</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Bridal Pricing Ideas</a>
+                    </div>
+                    <div class="feature-visual" style="background-image: url "{{ url_for('static', filename='images/1660994843268_FM2418-4_5.jpg') }}";; width: 100%; height: 100%">
+                    </div>
+                </div>
+
+                <div class="service-feature haute-couture">
+                    <div class="feature-visual" style="background-image: url "{{ url_for('static', filename='images/spring-2024-haute-couture-wedding-looks.webp') }}"; width: 100%; height: 100%;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Haute Couture Styling: DRAPED LIKE ITS A DRESS #ThisIsNotADress</h3>
+                        <p>This is a couture-only service, where outfits are created on the spot using drape and temporary stitch techniques. We create a mood board to explain the overall looks.</p>
+                        <div class="pricing-timing">
+                            <h4>Pricing & Terms</h4>
+                            <p>$500 per look. A minimum of 3 looks per day is required.</p>
+                            <p class="note">Note: We retrieve the fabrics as soon as photos are taken. This service does not include a photographer, hairstylist, makeup artist, or location.</p>
+                        </div>
+                        <a href="#inquire" class="btn btn-secondary">Inquire About Styling</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="consultation" class="section-container consultation-process">
+                <h2>The Consultation Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <h4>Your Session</h4>
+                        <p>All bespoke orders begin with a required consultation. Sessions are generally held virtually unless an in-person meeting is requested.</p>
+                        <p>Virtual sessions can be via email, iMessage, WhatsApp, or face-to-face via FaceTime or WhatsApp video.</p>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                    <div class="process-step">
+                        <h4>Planning Ahead</h4>
+
+                        <p>For quality assurance, please book your consultation 6 months prior to your event.</p>
+
+                        <p>We can make exceptions for sooner events depending on our schedule. Share your date with us to see if fast-tracking is possible.</p>
+
+                        <p>Consultations last for about 55 minutes or less per person.</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>Fees & Payments</h4>
+
+                        <p>Consultation fees must be paid before confirmation.</p>
+
+                        <p>Fees are non-refundable and non-transferable.</p>
+                        <p>We accept payments in Nigerian Naira and multiple global currencies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container policies-agreement">
+                <h2>Important Policies: Quality, Materials, and Terms</h2>
+
+                <div class="accordion-container">
+
+                    <div class="accordion-item">
+                        <div class="policy-header">Fabric & Materials</div>
+                        <div class="policy-content">
+                            <p>For design integrity and craftsmanship standards, all materials are exclusively sourced and selected by Picture Perfect.</p>
+                            <p>Clients may not supply external fabrics.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="policy-header">Deposits & Payment Terms</div>
+                        <div class="policy-content">
+                            <p>A 70% deposit is required to initiate production, 20% at first fitting and the final 10% settled before pickup or delivery.</p>
+
+                            <p>Payments are accepted through our website or via secure direct payment links.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="policy-header">Changes, Refunds, and Exchanges</div>
+                        <div class="policy-content">
+
+                            <p>Picture Perfect does not offer refunds or exchanges after the purchase of fabric and production has commenced (maximum of 15 days after consultation).</p>
+
+                            <p>Any change to the agreed-upon design, lining, fabric, or embellishment after production has commenced will incur a minimum charge of 40% of the initial production cost.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="policy-header">Fittings</div>
+                        <div class="policy-content">
+
+                            <p>Please prepare to come in for your fitting when you are not in a hurry; this is a couture service.</p>
+
+                            <p>Fittings done after the close of work will attract extra charges.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="policy-header">Client Responsibility & Liability</div>
+                        <div class="policy-content">
+                            <p>For dresses made with illusion mesh or net fabrics(very delicate), clients are responsible for the integrity of the fabric once worn. Please ensure to follow our care guide for your dress attached, to enable use and reuse</p>
+
+                            <p>Picture Perfect is not liable for any rips, tears, or damage caused during use.</p>
+                            <p>Clients are responsible for the cost of any further adjustments needed after the garment has been worn.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section-container premium-callout">
+                <h3>Exclusive Home/Location Consultation</h3>
+                <ul>
+                    <li>Abuja (In-City): $150/hour</li>
+                    <li>Out of Abuja (Day Trip): $1,000</li>
+                    <li>Outside Nigeria (Day Trip): $5,000</li>
+                    <li>Outside Africa (2/3 days Trip): $8,000</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="final-cta">
+            <div class="cta-content">
+                <h3>Ready to invest in your Picture Perfect look?</h3>
+                <a href="contact.html" class="btn btn-primary btn-large">Book Your Bespoke Consultation</a>
+            </div>
+
+            </div>
+        </footer>
+        <div id="contact" class="site-footer">
+            <div class="container footer-inner">
+                <p>© 2025<span id="year"></span> Picture perfect — All rights reserved.</p>
+            </div>
+    </body>
+
+</html>
